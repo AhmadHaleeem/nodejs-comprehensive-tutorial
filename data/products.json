@@ -1,1 +1,16 @@
-[{"title":"Apple"},{"title":"Bread"},{"title":"Orange"},{"title":"Apple Test"}]
+[
+    {
+        "id": "13234",
+        "title": "Apple",
+        "imageURL": "https://5.imimg.com/data5/CE/GT/MY-35754189/fresh-apple-500x500.jpg",
+        "price": "1.99",
+        "description": "this is tasty apple"
+    },
+    {
+        "title": "kiwi",
+        "imageURL": "https://www.keukenliefde.nl/wp-content/uploads/2019/04/canstockphoto6630392.jpg",
+        "price": "5.99",
+        "description": "Natuurlijk is al het fruit gezond. Maar sommige fruitsoorten springen erbovenuit. Kiwi’s zijn hier een goed voorbeeld van. Deze zoetzure vruchten zitten bomvol vitamines en antioxidanten en helpen je om je lichaam gezond te houden. ",
+        "id": "0.9704592748941558"
+    }
+]
