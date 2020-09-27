@@ -1,1 +1,9 @@
-[{"id":"0.5878956849379382","title":"kiwi","imageURL":"https://www.keukenliefde.nl/wp-content/uploads/2019/04/canstockphoto6630392.jpg","price":"5.99","description":"Natuurlijk is al het fruit gezond. Maar sommige fruitsoorten springen erbovenuit. Kiwi’s zijn hier een goed voorbeeld van"}]
+[
+    {
+        "id": "0.5878956849379382",
+        "title": "kiwi",
+        "imageURL": "https://www.keukenliefde.nl/wp-content/uploads/2019/04/canstockphoto6630392.jpg",
+        "price": "5.99",
+        "description": "Natuurlijk is al het fruit gezond. Maar sommige fruitsoorten springen erbovenuit. Kiwi’s zijn hier een goed voorbeeld van"
+    }
+]
