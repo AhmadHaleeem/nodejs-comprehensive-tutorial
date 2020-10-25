@@ -1,9 +1,9 @@
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const errorController = require("./controllers/error");
 
-const { mongoConnect } = require("./util/database");
 const User = require("./models/user");
 
 const app = express();
@@ -18,10 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use((req, res, next) => {
-  User.findById('5f831b919fe8582bf05f6ef1')
-    .then(user => {
-      const logginedUser = new User(user.name, user.email, user.cart, user._id); // User
-      req.user = logginedUser;
+  User.findById("5f9589748cbf4b1a7cd1b583")
+    .then((user) => {
+      req.user = user;
       next();
     })
     .catch((err) => console.log(err));
@@ -32,6 +31,24 @@ app.use(shopRoutes);
 
 app.use(errorController.get404Page);
 
-mongoConnect(() => {
-  app.listen(3000);
-});
+mongoose
+  .connect(
+    "mongodb+srv://AhmadHaleem:ahmad0991445186!@cluster0.xx8e1.mongodb.net/shop?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then((result) => {
+    User.findOne().then((user) => {
+      if (!user) {
+        const user = new User({
+          name: "Ahmad",
+          email: "ahmad@test.nl",
+          cart: { items: [] },
+        });
+        user.save();
+      }
+    });
+    app.listen(3000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
